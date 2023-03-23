@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXT_INNOVATION</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    <script src="sketch.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header id ="header">
+            <div class="container">
+                <div class="header-contents">
+                    <div class="header-logo">
+                        <h1><a href="#"><span>NEXT</span>_INNOVATION</a></h1>
+                    </div>
+                    <ul class="header-nav">
+                        <li class="nav-item" v-for="(item,i) in menus" :key="i">
+                            <a :href="item.path">{{item.label}}</a>
+                        </li>
+                    </ul>
+
+                    <!-- ハンバーガーメニュー -->
+              <div class = "header-right">
+                <nav class = "global-nav">
+                <ul class = "global-nav__list">
+                    <li class = "global-nav__item" v-for="(item,i) in menus" :key="i">
+                        <a :href = "item.path">{{item.label}}</a>
+                    </li>
+                </ul>
+                </nav>
+                <a class="menu-trigger" id = "js-hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <div class = "black-bg" id = "js-black-bg"></div>
+            </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- トップ -->
+        <section class="top parent">
+            <div class="child">
+                <div class="top-message">
+                    <h1>Work more efficiently</h1>
+                    <p>We will support you to make your work more efficient.</p>
+                    <button v-on:mouseover="mouseOverAction" v-on:mouseleave="mouseLeaveAction">
+                        <a :href="menus[2].path">{{message}}</a>
+                    </button>
+                    <span class="btn-shadow"></span>
+                </div>
+            </div>
+        </section>
+
+        <main>
+            <!-- サービス -->
+            <section id="service" class="animationTarget1">
+                <div class="container">
+                    <h1 class = "title1">SERVICE</h1>
+                    <div class="service-contents">
+                        <!-- Swiper -->
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for="(cards,card) in services" :key="card">
+                                    <div class="service-item">
+                                        <div class="item-message">
+                                            <h1>{{cards.id}}</h1>
+                                            <h1>{{cards.name}}</h1>
+                                            <p>{{cards.comment}}</p>
+                                            <a href="">Read More</a>
+                                        </div>
+                                        <div class="item-picture">
+                                            <p><img :src="cards.picture"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 会社概要 -->
+            <section id="about" class="animationTarget2">
+                <div class="container">
+                    <div class="about-contents">
+                            <h1 class="title2">ABOUT_US</h1>
+                            <div class = "about-item-one">
+                                <div class="about-image-one">
+                                    <img src="./picture/pexels-pixabay-269077.jpg">
+                                </div>
+                            </div>
+
+                            <div class = "about-item-two animationTarget3">
+                                    <div class="about-image-two">
+                                        <img src="./picture/pexels-cadeau-maestro-1170412.jpg">
+                                    </div>
+                                    <div class="about-message">
+                                        <h1>MESSAGE</h1>
+                                        <p>
+                                            message.message.message.message.message.message.message.message.message.message.
+                                            message.message.message.message.message.message.message.message.message.message.
+                                        </p>
+                                        <a :href="menus[1].path">Read More</a>
+                                    </div>
+                            </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 採用情報 -->
+            <section id="recruit" class="animationTarget4">
+                <div class="container">
+                    <h1 class="title3">RECRUIT</h1>
+                    <div class="rec-cards">
+                        <ul class="rec-list">
+                            <li class="rec-item" v-for="(recards,recard) in recruits" :key="recard">
+                                <div class="re-item-image">
+                                    <img :src="recards.image">
+                                </div>
+                                <div class="re-item-message">
+                                    <h1>{{recards.name}}</h1>
+                                    <p>
+                                        message.message.message.message.message.message.message.message.message.message.
+                                        message.message.message.message.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="rec-contents animationTarget5">
+                    <div class="rec-message">
+                        <h1>MESSAGE</h1>
+                        <p>
+                            message.message.message.message.message.message.message.message.message.message.
+                            message.message.message.message.message.message.message.message.message.message.
+                        </p>
+                        <a :href="menus[3].path">ENTRY</a>
+                    </div>
+                    <div class="rec-image">
+                        <img src="picture/pexels-tima-miroshnichenko-5439145.jpg">
+                    </div>
+                </div>
+            </section>
+
+            <!-- お問い合わせ -->
+            <section id="contact" class="animationTarget6">
+                <div class="container">
+                    <h1 class="title4">CONTACT</h1>
+                    <div class="con-contents">
+                        <div class="con-message">
+                            <h1>TITLE</h1>
+                            <p>I accept a request, the consultation at any time than a contact form.<br>
+                                Please feel free to contact us.
+                            </p>
+                        </div>
+                        <div class="con-icons">
+                            <p><a :href="menus[4].path"><i class="fas fa-arrow-right"></i></a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer">
+            <div class="container">
+                <div class="footer-contents">
+                    <h1 class = "bg-logo">NEXT_INNOVATION</h1>
+                    <div class="footer-logo">
+                        <h1><span>NEXT</span>_INNOVATION</h1>
+                        <div class="sns-icon">
+                            <div class ="frame">
+                                <a href="#" class="btn">
+                             <i class="fab fa-facebook-f" style="color: #3b5998;"></i>
+                            </a>
+                                <a href="#" class="btn">
+                              <i class="fab fa-twitter" style="color: #00acee;"></i>
+                            </a>
+                                <a href="#" class="btn">
+                             <i class="fab fa-dribbble" style="color: #ea4c89;"></i>
+                            </a>
+                                <a href="#" class="btn">
+                             <i class="fab fa-linkedin-in" style="color:#0e76a8;"></i>
+                            </a>
+                                <a href="#" class="btn">
+                             <i class="fab fa-get-pocket" style="color:#ee4056;"></i>
+                            </a>
+                                <a href="#" class="btn">
+                             <i class="far fa-envelope"></i>
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navigations">
+                        <div class="footer-nav">
+                            <h1 class="list-title">CONTENTS</h1>
+                            <ul class="footer-list">
+                                <li class="footer-item" v-for="(item,i) in menus" :key="i"><a :href="item.path">{{item.label}}</a></li>
+                            </ul>
+                        </div>
+                        <div class="location">
+                            <h1 class="list-title">LOCATION</h1>
+                            <p>NEXT_INNOVATION Co., Ltd.</p>
+                            <p>〒000-0000　×××××××× ××-×-×F</p>
+                            <p>OPEN.9:00〜18:00　CLOSE. SATURDAY・SUNDAY・HOLIDAYS</p>
+                            <div class="loc-contact">
+                                <div class="tel">
+                                    <h1 class="list-title">TEL.</h1>
+                                    <p>087-816-6950</p>
+                                </div>
+                                <div class="fax">
+                                    <h1 class="list-title">FAX.</h1>
+                                    <p>087-816-2080</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- <script src="JS/swipe.js"></script> -->
+<script src="JS/main.js"></script>
+</body>
+</html>

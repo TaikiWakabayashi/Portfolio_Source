@@ -1,0 +1,114 @@
+@media screen and (max-width: 1042px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  /* コンテナー */
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+  /* サイドメニュー */
+  #side_menu {
+    display: none;
+  }
+  /* ヘッダー */
+  .header-right {
+    display: block;
+  }
+  /* ファンクション */
+  .func-message {
+    font-size: 1rem;
+  }
+  .func1 .func-message h1,
+  .func2 .func-message h1 {
+    font-size: 2.3rem;
+  }
+  /* プラン */
+  .plan-contents {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .planD1,
+  .planD2,
+  .planAu,
+  .planPocket {
+    width: 100%;
+    height: 430px;
+  }
+  .Pocketoption img {
+    width: 20%;
+    min-width: 190px;
+    min-height: 120px;
+  }
+  .planD1 .title,
+  .planD2 .title,
+  .planAu .title,
+  .planPocket .title {
+    font-size: 2.7rem;
+  }
+  .planD1 .title span,
+  .planD2 .title span,
+  .planAu .title span,
+  .planPocket .title span {
+    font-size: 1.4rem;
+  }
+  .D1message p,
+  .D2message p,
+  .Aumessage p,
+  .Pocketmessage p {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .D1message p span,
+  .D2message p span,
+  .Aumessage p span,
+  .Pocketmessage p span {
+    font-size: 1.3rem;
+    font-weight: normal;
+  }
+  .D1option h1,
+  .D2option h1,
+  .Auoption h1,
+  .Pocketoption h1 {
+    font-size: 1.9rem;
+    text-align: center;
+  }
+  /* ブログ */
+  .blog-contents {
+    background-position: center;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .func1,
+  .func2 {
+    display: block;
+  }
+  .func-image,
+  .func-message {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media screen and (max-width: 715px) {
+  .slide1 h1,
+  .slide2 h1,
+  .slide3 h1 {
+    font-size: 3.5rem;
+  }
+
+  .graph-message h1 {
+    font-size: 2.6rem;
+  }
+}

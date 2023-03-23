@@ -1,0 +1,521 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  -ms-overflow-x: hidden;
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: rgb(6, 6, 6);
+  font-family: "Roboto Mono", monospace;
+}
+
+/* ーーーーー　ヘッダー　ーーーーー */
+header {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  z-index: 100;
+  background-color: transparent;
+}
+
+.header-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-contents {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-logo {
+  height: 100%;
+  display: flex;
+}
+
+.header-logo > a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  color: rgb(107, 91, 54);
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 100px;
+}
+
+.header-list {
+  margin: 0;
+}
+.header-list ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+}
+.header-list > ul > li {
+  width: 100px;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.list-item {
+  display: block;
+  color: rgb(107, 91, 54);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.item-text {
+  position: relative;
+  z-index: 1;
+}
+.item-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 0%;
+  height: 1px;
+  background-color: rgb(107, 91, 54);
+  transition: all 0.4s;
+}
+.header-list > ul > li:hover .item-text::after {
+  width: 100%;
+}
+.sns {
+  width: 20%;
+  height: 100%;
+}
+.sns > ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+.sns > ul > li {
+  list-style: none;
+  text-align: center;
+}
+.sns > ul > li > a {
+  display: block;
+  width: calc(100% / 3);
+  color: rgb(107, 91, 54);
+  font-size: 2rem;
+  line-height: 100px;
+}
+.sns > ul > li > a > i {
+  transition: all 0.3s;
+}
+.sns > ul > li > a > i:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.header-right {
+  display: none;
+}
+/* ーーーーー　ヘッダー　ーーーーー */
+
+/* ーーー　メイン　ーーー */
+.main {
+  width: 100%;
+  position: relative;
+}
+/* ーーー　メイン　ーーー */
+
+/* ーーーーー　セクション１　ーーーーー */
+#section1 {
+  position: relative;
+  z-index: 2;
+  padding: 45vh 0;
+}
+#bg-section1 {
+  background-image: url("../picture/618f46eceba92.jpg");
+}
+.bg-section {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background-position: bottom;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+}
+#section1 .content-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+#section1 .inner_topic {
+  display: flex;
+  justify-content: center;
+}
+#section1 .inner-el {
+  font-size: 4rem;
+  position: relative;
+  text-align: center;
+  padding: 0 10px;
+  max-width: 50px;
+}
+.sub-text {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 20px;
+}
+/* ーーーーー　セクション１　ーーーーー */
+
+/* ーーーーー　セクション２　ーーーーー */
+#section2 {
+  position: relative;
+  z-index: 4;
+  padding: 10vh 0;
+  background-color: rgb(6, 6, 6);
+}
+#fog01 {
+  position: absolute;
+  bottom: 30vh;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+#flog > img {
+  width: 100%;
+}
+
+/* ーーー　プロフィール　ーーー */
+#profile,
+.pro-wrapper {
+  width: 100%;
+}
+#profile {
+  height: 10vh;
+}
+.pro-wrapper {
+  height: 100%;
+}
+.title {
+  font-size: 5.5rem;
+  color: rgba(255, 255, 255, 0.368);
+}
+.pro-contents {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.pro-topic {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.pro-topic table {
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+}
+.pro-image {
+  width: 50%;
+}
+.pro-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ーーー　プロフィール　ーーー */
+/* ーーーーー　セクション２　ーーーーー */
+
+/* ーーーーー　セクション３　ーーーーー */
+#section3 {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  padding: 10vh 0;
+}
+.skill-contents {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 10vh 0;
+}
+.skill-card {
+  width: calc(100% / 6);
+  height: 230px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  padding: 7px;
+  padding-top: 12px;
+  transition: all 0.4s;
+  opacity: 0;
+  transform: translate(30px, 30px);
+}
+
+.skill-card:nth-of-type(1) {
+  background-color: rgb(0, 119, 255);
+  border: 1px solid rgb(0, 119, 255);
+}
+.skill-card:nth-of-type(2) {
+  background-color: gold;
+  border: 1px solid gold;
+}
+.skill-card:nth-of-type(3) {
+  background-color: rgb(75, 180, 255);
+  border: 1px solid rgb(75, 180, 255);
+}
+.skill-card:nth-of-type(4) {
+  background-color: rgb(111, 0, 255);
+  border: 1px solid rgb(111, 0, 255);
+}
+.skill-card:nth-of-type(5) {
+  background-color: rgb(255, 149, 0);
+  border: 1px solid rgb(255, 149, 0);
+}
+.skill-card:nth-of-type(1).active {
+  transition-delay: 1s;
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+.skill-card:nth-of-type(2).active {
+  transition-delay: 1.2s;
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+.skill-card:nth-of-type(3).active {
+  transition-delay: 1.4s;
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+.skill-card:nth-of-type(4).active {
+  transition-delay: 1.6s;
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+.skill-card:nth-of-type(5).active {
+  transition-delay: 1.8s;
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+.icon {
+  width: 100%;
+  font-size: 2rem;
+  transition: all 0.4s;
+  padding: 8px;
+  padding-top: 15px;
+}
+.icon > i {
+  transition: all 0.4s;
+  font-size: 2.5rem;
+}
+.star {
+  opacity: 0;
+  transition: all 0.4s;
+  transform: translateY(50%);
+  padding: 8px;
+}
+.html_css:hover,
+.javascript:hover,
+.wordpress:hover,
+.bootstrap:hover,
+.java:hover {
+  font-size: 2.2rem;
+}
+.html_css:hover i,
+.javascript:hover i,
+.wordpress:hover i,
+.bootstrap:hover i,
+.java:hover i {
+  font-size: 3.5rem;
+}
+.html_css:hover + .star,
+.javascript:hover + .star,
+.wordpress:hover + .star,
+.bootstrap:hover + .star,
+.java:hover + .star {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.color {
+  color: white;
+}
+.transparent {
+  color: rgba(255, 255, 255, 0.293);
+}
+/* ーーーーー　セクション３　ーーーーー */
+
+/* ーーーーー　セクション４　ーーーーー */
+#section4 {
+  width: 100%;
+  position: relative;
+  z-index: 4;
+  padding: 10vh 0;
+  background-color: rgb(6, 6, 6);
+}
+#message {
+  width: 100%;
+}
+.mess-contents {
+  width: 100%;
+  padding: 10vh 0;
+  position: relative;
+  z-index: 2;
+}
+#smoke {
+  width: 100%;
+  position: absolute;
+  top: 90%;
+  left: 0;
+}
+#smoke > img {
+  width: 100%;
+  object-fit: contain;
+  transition: all 0.7s;
+  opacity: 0;
+  transform: scale3d(0.2, 0.2, 0.2);
+}
+#smoke.active > img {
+  opacity: 1;
+  transform: scale3d(0.5, 0.5, 0.5);
+}
+.mess-contents > p {
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.711);
+  transition: all 0.4s;
+  opacity: 0;
+  transform: translateY(-50px);
+}
+.mess-contents > p:nth-of-type(1).active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.mess-contents > p:nth-of-type(2).active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.1s;
+}
+.mess-contents > p:nth-of-type(3).active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.2s;
+}
+.mess-contents > p:nth-of-type(4).active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.3s;
+}
+.mess-contents > p:nth-of-type(5).active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.4s;
+}
+.mess-contents > p:nth-of-type(6).active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.5s;
+}
+/* ーーーーー　セクション４　ーーーーー */
+
+/* ーーーーー　セクション５　ーーーーー */
+#section5 {
+  width: 100%;
+  position: relative;
+  z-index: 4;
+  padding: 10vh 0;
+  background-color: rgb(6, 6, 6);
+}
+#contact {
+  width: 100%;
+}
+.con-contents {
+  width: 100%;
+  padding: 10vh 0;
+}
+.con-contents > h1 {
+  color: rgba(255, 255, 255, 0.882);
+  font-size: 3rem;
+  text-align: center;
+}
+.footer-icon {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.footer-icon > a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.4s;
+  opacity: 0;
+  transform: scale(1, 1) translateY(0px);
+}
+.footer-icon > a:nth-of-type(1) {
+  background-color: rgb(166, 0, 255);
+  transform: translateY(-50px);
+}
+.footer-icon > a:nth-of-type(2) {
+  background-color: rgb(1, 194, 233);
+  transform: translateY(-50px);
+}
+.footer-icon > a:nth-of-type(3) {
+  background-color: rgb(15, 217, 0);
+  transform: translateY(-50px);
+}
+.footer-icon > a.active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.footer-icon > a > i {
+  display: block;
+  font-size: 3rem;
+  line-height: 50px;
+  color: white;
+}
+.footer-icon > a:hover {
+  transform: scale(1.2, 1.2);
+}
+
+/* ーーーーー　セクション５　ーーーーー */
+footer {
+  width: 100%;
+  padding: 15px 0;
+}
+
+footer > p {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.882);
+  text-align: center;
+}
+/* ーーーーー　セクション５　ーーーーー */

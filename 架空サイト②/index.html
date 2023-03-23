@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star-Service</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/responsive.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- サイドメニュー -->
+    <div id="side_menu">
+        <a class="side_icon"><i class="fas fa-align-justify"></i></span></a>
+        <nav id="g-nav">
+            <div class="nav-logos"><img src="picture/logo-black.jpeg" alt=""></div>
+                <ul>
+                    <li><a href="#">TOP</a></li> 
+                    <li><a href="#">ABOUT</a></li> 
+                    <li><a href="#">PLAN</a></li> 
+                    <li><a href="#">Q&A</a></li> 
+                    <li><a href="#">CONTACT</a></li> 
+                </ul>
+        </nav>
+    </div>
+
+    <!-- メイン -->
+    <main>
+        <!-- ヘッダー -->
+        <header>
+            <div class="header-wrapper">
+                <div class="container">
+                    <div class="header-contents">
+                        <div class="header-logo">
+                            <a href=""><img src="picture/logo2.png" alt=""></a>
+                        </div>
+                        
+                        <!-- ハンバーガーメニュー -->
+                    <div class="header-right" id="right">
+                        <nav class="global-nav">
+                            <ul class="global-nav__list">
+                                <li class="global-nav__item"><a href="#">TOP</a></li>
+                                <li class="global-nav__item"><a href="#Abouts">ABOUT</a></li>
+                                <li class="global-nav__item"><a href="#Works">PLAN</a></li>
+                                <li class="global-nav__item"><a href="#Technologies">Q&A</a></li>
+                                <li class="global-nav__item"><a href="#Recruits">CONTACT</a></li>
+                            </ul>
+                        </nav>
+                        <a class="menu-trigger" id="js-hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                        <div class="black-bg" id="js-black-bg"></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="top">
+            <div class="container">
+                <!-- Swiper -->
+                <div class="swiper mySwiper1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide1" style="background-image: url(picture/top.jpeg);">
+                            <div class="overlay"></div>
+                            <h1>月々4,860円で最大60GBまで使用可能。</h1>
+                            <button>プランを見る</button>
+                        </div>
+                        <div class="swiper-slide slide2" style="background-image: url(picture/men.jpg);">
+                            <div class="overlay"></div>
+                            <h1>通信速度業界最速<br>通信量・通信速度ともに高水準です。</h1>
+                            <button>比較表はこちら</button>
+                        </div>
+                        <div class="swiper-slide slide3" style="background-image: url(picture/earth-network2.jpg)">
+                            <div class="overlay"></div>
+                            <h1>スターモバイルであなたも快適な生活を。</h1>
+                            <button>ご連絡はこちら<i class="fab fa-instagram"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h1 class="about-title">通信量を気にしない、ストレスフリーな生活へ</h1>
+                <div class="about-contents">
+                     <!-- Swiper -->
+                    <div class="swiper mySwiper2">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="picture/shot-women.jpg" alt=""></div>
+                          <div class="swiper-slide"><img src="picture/insta.jpg" alt=""></div>
+                          <div class="swiper-slide"><img src="picture/call.jpg" alt=""></div>
+                          <div class="swiper-slide"><img src="picture/netflix.jpg" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <div class="about-message">
+                    <p>スターモバイルでは月々最大60GBご利用する事も可能です。<br><span>※1日2GB総量制限 × 30日</span><br>ご自身の利用状況に合わせたプランもございます。<br>自分に合ったプランを選択して、生活インフラをより快適に。</p>
+                    <button>プランを見る</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="function">
+            <div class="container">
+                <div class="func-contents">
+                    <div class="func1">
+                        <div class="func-image"><img src="picture/5G.jpg" alt=""></div>
+                        <div class="func-message">
+                            <h1>- Get ready for Next Generation -<span>次世代通信に備えて</span></h1>
+                            <p>第５世代移動通信システム（5G）によって、通信量は約2.7倍にまで増えると言われております。<br>
+                                現代は「連絡」・「決済」・「ビジネス」・「娯楽」など、あらゆる場面をスマートフォン一台で解決できる時代となりました。<br>
+                                その反面、「通信速度の低下」、「通信量の制限」は私達の生活に大きな弊害を与えています。<br>
+                                キャリアによる「通信」によって生活が支えられている今、通信を気にせずスマホを利用する事で、今後の生活をより快適にしませんか。<br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="func2">
+                        <div class="func-image"><img src="picture/QRcode.jpg" alt=""></div>
+                        <div class="func-message">
+                            <h1>- Enrich your Daily Life -<span>日常をより豊かに</span></h1>
+                            <p>DX（デジタルトランスフォーメーション）の普及やIoTの浸透により、私達の生活は今後もより豊かになる事が予想されます。<br>
+                                その技術は恐らくネットワークによる通信で繋がり、私達が持つスマートフォンをはじめとするデバイスへ集約されていく事でしょう。<br>
+                                通信に困らない環境を作りをし、日々の生活を今以上に豊かにする準備をしましょう！
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="graph">
+            <div class="container">
+                <div class="graph-contents">
+                    <canvas id="myChart1" width="400" height="400"></canvas>
+                </div>
+                <div class="graph-message">
+                    <h1>回線件数も年々上昇中。格安SIM以外にも多数プランあり。</h1>
+                    <p>2019年からMVNO事業開始後、現在にまで年々新規登録による回線件数は上昇しております。<br>
+                        スターモバイルでは格安SIM以外にも、各種プランを取り揃えております。<br>
+                        登録に関する質問・その他質問も受け付けておりますので、お問い合わせフォームよりお気軽にご質問をご連絡をください。
+                    </p>
+                    <button>Q&Aを見る</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="plan">
+            <div class="container">
+                <div class="plan-contents">
+                    <div class="planD1">
+                        <h1 class = "title">スターモバイルD1<span>docomo回線利用の音声SIM</span></h1>
+                        <div class="D1message">
+                            <p>4,860円<span>（税込5,346円）</span></p>
+                            <p>月間60ギガ<span>※1日2ギガ制限</span></p>
+                            <p>30秒/20円<span>※通話料（税込22円）</span></p>
+                        </div>
+                        <div class="D1option">
+                            <h1>スター10分かけ放題</h1>
+                            <p>オプション価格：850円<span>（税込935円）</span></p>
+                            <p>通話10分まで何度かけても無料！！<span>10分超えた通話は30秒/10円の安心価格（税込11円）</span></p>
+                        </div>
+                    </div>
+                    <div class="planD2">
+                       <h1 class="title">スターモバイルD2<span>docomo回線利用の音声SIM</span></h1>
+                       <div class="D2message">
+                        <p>4,860円<span>（税込5,346円）</span></p>
+                        <p>月間30ギガ<span>※1日1ギガ制限</span></p>
+                        <p>10分かけ放題</p>
+                       </div>
+                       <div class="D2option">
+                        <h1>スター10分かけ放題無料付属</h1>
+                        <p>通話10分まで何度かけても無料！！<span>10分超えた通話は30秒/10円の安心価格（税込11円）</span></p>
+                    </div>
+                    </div>
+                    <div class="planAu">
+                        <h1 class="title">スターモバイルU<span>KDDI回線利用の音声SIM</span></h1>
+                       <div class="Aumessage">
+                        <p>4,860円<span>（税込5,346円）</span></p>
+                        <p>月間30ギガ</p>
+                        <p>30秒/10円<span>（非課税）</span></p>
+                       </div>
+                       <div class="Auoption">
+                        <h1>新規契約のみ</h1>
+                        <h1>auエリアを完全網羅</h1>
+                    </div>
+                    </div>
+                    <div class="planPocket">
+                        <h1 class="title">スターWiFi W<span>SoftBank回線利用のデータSIM+ルーター</span></h1>
+                       <div class="Pocketmessage">
+                        <p>4,860円<span>（税込5,346円）</span></p>
+                        <p>月間50ギガ</p>
+                        <p>高速プラチナバンド回線</p>
+                       </div>
+                       <div class="Pocketoption">
+                        <p><img src="picture/pocketWifi.jpg" alt=""></p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="beside">
+            <div class="container">
+                <div class="beside-contents">
+                    <canvas id="myChart2" width="400" height="400"></canvas>
+                </div>
+
+                <div class="beside-message">
+                    <h1>通信速度は業界最速</h1>
+                    <p>スターモバイル通信速度は、平均ダウンロード速度73.8Mbps、平均アップロード速度27.23Mbpsと、<br>
+                        通信量だけでなく、通信速度もMVNO業界内トップとなっております。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog">
+            <div class="blog-wrapper">
+                <div class="container">
+                    <div class="blog-contents">
+                        <h1>最新情報も随時発信</h1>
+                        <p>個人ブログにて、スターモバイル、通信業界の最新情報も随時更新しております。</p>
+                        <button>投稿を見る</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="review">
+            <div class="review-wrapper">
+                <div class="container">
+                    <div class="review-contents">
+                        <h1>よく頂くご質問</h1>
+                        <p>お客様から多く寄せられる質問をここにまとめました。<br>
+                        その他ご質問もあれば受け付けておりますので、お気軽にご連絡ください。</p>
+                        <dl id="accordion">
+                            <dt>いつでも会員を退会する事はできますか？</dt>
+                            <dd>可能です。</dd>
+                            <dt>回線はどこを使用することになるのでしょうか。</dt>
+                            <dd>ドコモです。</dd>
+                            <dt>事前の手続き等はあるのでしょうか。</dt>
+                            <dd>SIMロックの解除が必要になります。</dd>
+                            <dt>格安SIM以外にはどのようなプランがあるのでしょうか。</dt>
+                            <dd>ポケットWiFi等があります。</dd>
+                        </dl>
+                        <button>お問い合わせ</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="listen">
+            <div class="listen-wrapper">
+                <div class="container">
+                    <div class="listen-contents">
+                        <div class="overlay"></div>
+                        <h1>通信に困らない、快適な生活へ。</h1>
+                        <button>ご連絡はこちら<i class="fab fa-instagram"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-wrapper">
+            <div class="container">
+                <div class="footer-logos">
+                    <div class="footer-logo"><img src="picture/logo.png" alt=""></div>
+                </div>
+                <div class="footer-contents">
+                    <small>Star Service Co.,Ltd.</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="JS/slide.js"></script>
+<script src="JS/main.js"></script>
+</html>
